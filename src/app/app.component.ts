@@ -13,7 +13,7 @@ interface Tab {
     <div class="tabs">
       <ul class="tab-group">
         <li class="tab" *ngFor="let tab of tabs; index as i" [class.active]="tab.active" (click)="changeTab(i)">
-          <i class="icon {{tab.iconClass}}"></i>{{tab.title}}
+          <i class="icon" ngClass="tab.iconClass"></i>{{tab.title}}
         </li>
       </ul>
       <div class="tab-content-group">
